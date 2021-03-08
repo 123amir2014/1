@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>داشبورد</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400" rel="stylesheet" />    
+	<link href="css/templatemo-style.css" rel="stylesheet" />
+</head>
+<!--
+
+Amirhossein Mollaei 
+
+-->
+<body> 
+
+	<div class="container">
+	<!-- Top box -->
+		<!-- Logo & Site Name -->
+		<div class="placeholder">
+			<div class="parallax-window" data-parallax="scroll" data-image-src="img/simple-house-01.jpg">
+				<div class="tm-header">
+					<div class="row tm-header-inner">
+						<div class="col-md-6 col-12">
+							<img src="img/simple-house-logo.png" alt="Logo" class="tm-site-logo" /> 
+							<div class="tm-site-text-box">
+								<h1 class="tm-site-title">MAQALAK</h1>
+								<h6 class="tm-site-description">هر چه دل تنگت می‌خواهد بنویس و کسب درآمد کن</h6>	
+							</div>
+						</div>
+						<nav class="col-md-6 col-12 tm-nav">
+							<ul class="tm-nav-ul">
+								<li class="tm-nav-li"><a href="index.php" class="tm-nav-link">خانه</a></li>
+								<li class="tm-nav-li"><a href="about.html" class="tm-nav-link">درباره ما</a></li>
+								<li class="tm-nav-li"><a href="contact.html" class="tm-nav-link">ارتباط باما</a></li>
+								<li class="tm-nav-li"><a href="Login-register.html" class="tm-nav-link">ورود</a></li>
+								<li class="tm-nav-li"><a href="Account.html" class="tm-nav-link active">داشبورد</a></li>
+							</ul>
+						</nav>	
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<main>
+			<header class="row tm-welcome-section">
+				<h2 class="col-12 text-center tm-section-title">ایجاد مقاله</h2>
+				<p class="col-12 text-center">دبرای مقاله خود یک عنوان بنویسید</p>
+			</header>
+			
+			
+
+						
+							<div class="form-group">
+							    	<form action="sendpost.php" method="POST" class="tm-contact-form">
+							    	    
+					          <input type="title" name="title" class="form-control" placeholder="عنوان مقاله" required="title" />
+							</div>
+							
+					       <div class="form-group">
+					          <textarea rows="5" name="message" class="form-control" placeholder="متن مقاله" required="message"></textarea>
+					        </div>
+
+					      <form action="/action_page.php">
+ 						 <label for="img">تصویر مقاله</label>
+  						<input type="file" id="img" name="img" accept="image/*">
+ 						 <input type="submit">
+						</form>
+
+
+
+
+					        <div class="form-group tm-d-flex">
+					          <button type="submit" name="sendp" required="sendp" class="tm-btn tm-btn-success tm-btn-right">
+					            ارسال مقاله
+					          </button>
+					        </div>
+    </form>
+						</div>
+					
+				
+
+		</main>
+
+		<footer class="tm-footer text-center">
+			<p>Copyright &copy; 2020 Maqalak 
+            
+            | Design: <a rel="nofollow" href="https://sarteh.com/designers/amirhossein_mollaei">AmirHosseinMollaei</a></p>
+		</footer>
+	</div>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/parallax.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			// Handle click on paging links
+			$('.tm-paging-link').click(function(e){
+				e.preventDefault();
+				
+				var page = $(this).text().toLowerCase();
+				$('.tm-gallery-page').addClass('hidden');
+				$('#tm-gallery-page-' + page).removeClass('hidden');
+				$('.tm-paging-link').removeClass('active');
+				$(this).addClass("active");
+			});
+		});
+	</script>
+</body>
+</html>
